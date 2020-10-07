@@ -15,5 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^3.0.0",
+    "netlify-lambda": "^2.0.1"
   }
 }
