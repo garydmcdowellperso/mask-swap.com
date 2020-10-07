@@ -1,0 +1,19 @@
+{
+  "name": "mask-swap.com",
+  "version": "0.0.1",
+  "description": "Covid sucks, let's spread show happiness and share your face mask protection to the world",
+  "main": "index.js",
+  "authors": {
+    "name": "Gary",
+    "email": "garydmcdowell@gmail.com"
+  },
+  "repository": "github.com:garydmcdowellperso/mask-swap.com.git/mask-swap.com",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
