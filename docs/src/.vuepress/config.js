@@ -35,6 +35,10 @@ module.exports = {
     search: false,
     nav: [
       {
+        text: 'View',
+        link: '/view/',
+      },
+      {
         text: 'Submit',
         link: '/submit/',
       },

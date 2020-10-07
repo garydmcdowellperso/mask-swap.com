@@ -1,6 +1,35 @@
+<style scoped>
+.action-button {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #3eaf7c;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  border-bottom: 1px solid #389d70;
+}
+.hero {
+  text-align: center;
+}
+.uploading-image {
+  border-style: solid;
+}
+</style>
 <template>
-  <div>
-    <img :src="profile.image" /><!-- grab the profile picture -->
+  <div class="hero">
+    <p>
+      Name: {{profile.name}} Location: {{profile.location}}
+    </p>
+    <p>
+      <img :src="profile.image" /><!-- grab the profile picture -->
+    </p>
+    <p>
+      <a class="nav-link action-button" @click="getMask()">
+        Another →
+      </a>
+    </p>
   </div>
 </template>
 <script>
@@ -12,10 +41,10 @@
       };
     }, 
     mounted() {
-      this.getMastodonProfile();
+      this.getMask();
     },
     methods: {
-      getMastodonProfile() {
+      getMask() {
         // change this to use your account Id
         fetch('https://simpatico.cloud/api/v1/getMask')
           .then(stream => stream.json())
