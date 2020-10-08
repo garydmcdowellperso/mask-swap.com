@@ -29,7 +29,7 @@
 }
 </style>
 <template>
-  <div class="hero" v-if="masks.length > 0">
+  <div class="hero" v-if="masks && masks.length > 0">
     <VueSlickCarousel :arrows="true" :dots="true">
       <div 
           v-for="(item, index) in masks">
