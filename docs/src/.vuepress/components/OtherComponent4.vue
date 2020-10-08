@@ -29,12 +29,10 @@
 }
 </style>
 <template>
-  <div class="hero" v-if="masks">
-    <carousel>
-      <slide
-          v-for="(item, index) in masks"
-          data-index="0"
-          data-name="MySlideName">
+  <div class="hero" v-if="masks.length > 0">
+    <VueSlickCarousel :arrows="true" :dots="true">
+      <div 
+          v-for="(item, index) in masks">
         <img :src="item.image" />
         <p>
           <a class="nav-link action-button" @click="acceptMask(item.id)">
@@ -44,17 +42,20 @@
             Reject X
           </a>
         </p>
-      </slide>
-    </carousel>
+      </div>
+    </VueSlickCarousel>
   </div>
 </template>
 <script>
   import "isomorphic-fetch" // keep IE happy
-  import { Carousel, Slide } from 'vue-carousel';
+  import VueSlickCarousel from 'vue-slick-carousel'
+  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+  // optional style for arrows & dots
+  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+  //import { Carousel, Slide } from 'vue-carousel';
   export default {
     components: {
-      Carousel,
-      Slide
+      VueSlickCarousel
     },
     mounted() {
       this.getUnmoderatedMasks();
