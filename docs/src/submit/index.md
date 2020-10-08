@@ -1,2 +1,2 @@
-Upload your mask
+# Upload your mask
 <OtherComponent3 />

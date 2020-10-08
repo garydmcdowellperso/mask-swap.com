@@ -37,11 +37,11 @@
       </a>
     </p>
     <p v-if="uploaded">
-      Uploaded
+      Uploaded - Your mask may take a little time to appear as we moderate all contributions
     </p>
     <p v-if="uploaded">
-      <a class="nav-link action-button" href="/">
-        Home →
+      <a class="nav-link action-button" href="/view/">
+        Look at some other contributions →
       </a>
     </p>
   </div>
