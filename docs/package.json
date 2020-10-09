@@ -19,7 +19,6 @@
   "dependencies": {
     "isomorphic-fetch": "^3.0.0",
     "netlify-lambda": "^2.0.1",
-    "vue-image-upload-resize": "^2.3.0",
     "vue-slick-carousel": "^1.0.6"
   }
 }
