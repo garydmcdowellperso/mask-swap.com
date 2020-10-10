@@ -111,6 +111,7 @@
           },
         }).then(
           response => {
+            this.getUnmoderatedMasks();
             console.log('deleteMask > ', response)
           }
         )
